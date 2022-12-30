@@ -66,6 +66,10 @@
 		B991AD63295DB830007C1D90 /* FIAgoraSampleHandlerSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B991AD3B295DB830007C1D90 /* FIAgoraSampleHandlerSocketManager.m */; };
 		B991AD64295DB841007C1D90 /* JWExtensionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B991AD02295DB7FA007C1D90 /* JWExtensionKit.framework */; };
 		B991AD65295DB841007C1D90 /* JWExtensionKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B991AD02295DB7FA007C1D90 /* JWExtensionKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B991AD6B295E9301007C1D90 /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B991AD6A295E9301007C1D90 /* CaptureViewController.m */; };
+		B991AD74295E93B1007C1D90 /* VideoDisplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B991AD6C295E93B0007C1D90 /* VideoDisplayLayer.m */; };
+		B991AD75295E93B1007C1D90 /* VideoH264EnCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B991AD6F295E93B1007C1D90 /* VideoH264EnCode.m */; };
+		B991AD76295E93B1007C1D90 /* VideoH264Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B991AD73295E93B1007C1D90 /* VideoH264Decoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +212,14 @@
 		B991AD39295DB830007C1D90 /* FIAgoraClientBufferSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIAgoraClientBufferSocketManager.m; sourceTree = "<group>"; };
 		B991AD3A295DB830007C1D90 /* FIAgoraSampleHandlerSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIAgoraSampleHandlerSocketManager.h; sourceTree = "<group>"; };
 		B991AD3B295DB830007C1D90 /* FIAgoraSampleHandlerSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIAgoraSampleHandlerSocketManager.m; sourceTree = "<group>"; };
+		B991AD69295E9301007C1D90 /* CaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureViewController.h; sourceTree = "<group>"; };
+		B991AD6A295E9301007C1D90 /* CaptureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureViewController.m; sourceTree = "<group>"; };
+		B991AD6C295E93B0007C1D90 /* VideoDisplayLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDisplayLayer.m; sourceTree = "<group>"; };
+		B991AD6D295E93B1007C1D90 /* VideoDisplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDisplayLayer.h; sourceTree = "<group>"; };
+		B991AD6F295E93B1007C1D90 /* VideoH264EnCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoH264EnCode.m; sourceTree = "<group>"; };
+		B991AD70295E93B1007C1D90 /* VideoH264EnCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoH264EnCode.h; sourceTree = "<group>"; };
+		B991AD72295E93B1007C1D90 /* VideoH264Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoH264Decoder.h; sourceTree = "<group>"; };
+		B991AD73295E93B1007C1D90 /* VideoH264Decoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoH264Decoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +293,12 @@
 		B991ACB3295DB6F8007C1D90 /* ReplyKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B991AD71295E93B1007C1D90 /* H264DeCode解码 */,
+				B991AD6E295E93B1007C1D90 /* H264EnCode编码 */,
+				B991AD6D295E93B1007C1D90 /* VideoDisplayLayer.h */,
+				B991AD6C295E93B0007C1D90 /* VideoDisplayLayer.m */,
+				B991AD69295E9301007C1D90 /* CaptureViewController.h */,
+				B991AD6A295E9301007C1D90 /* CaptureViewController.m */,
 				B991ACB4295DB6F8007C1D90 /* AppDelegate.h */,
 				B991ACB5295DB6F8007C1D90 /* AppDelegate.m */,
 				B991ACB7295DB6F8007C1D90 /* SceneDelegate.h */,
@@ -410,6 +428,24 @@
 				B991AD37295DB830007C1D90 /* row.h */,
 			);
 			path = libyuv;
+			sourceTree = "<group>";
+		};
+		B991AD6E295E93B1007C1D90 /* H264EnCode编码 */ = {
+			isa = PBXGroup;
+			children = (
+				B991AD70295E93B1007C1D90 /* VideoH264EnCode.h */,
+				B991AD6F295E93B1007C1D90 /* VideoH264EnCode.m */,
+			);
+			path = "H264EnCode编码";
+			sourceTree = "<group>";
+		};
+		B991AD71295E93B1007C1D90 /* H264DeCode解码 */ = {
+			isa = PBXGroup;
+			children = (
+				B991AD72295E93B1007C1D90 /* VideoH264Decoder.h */,
+				B991AD73295E93B1007C1D90 /* VideoH264Decoder.m */,
+			);
+			path = "H264DeCode解码";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -646,9 +682,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B991AD74295E93B1007C1D90 /* VideoDisplayLayer.m in Sources */,
 				B991ACBC295DB6F8007C1D90 /* ViewController.m in Sources */,
+				B991AD75295E93B1007C1D90 /* VideoH264EnCode.m in Sources */,
 				B991ACB6295DB6F8007C1D90 /* AppDelegate.m in Sources */,
 				B991ACC7295DB6F9007C1D90 /* main.m in Sources */,
+				B991AD6B295E9301007C1D90 /* CaptureViewController.m in Sources */,
+				B991AD76295E93B1007C1D90 /* VideoH264Decoder.m in Sources */,
 				B991ACB9295DB6F8007C1D90 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -865,6 +905,8 @@
 				DEVELOPMENT_TEAM = 8XEUVFYSL4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReplyKitDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App 需要您同意, 才能访问相机";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "App 需要您同意, 才能访问麦克风";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -892,6 +934,8 @@
 				DEVELOPMENT_TEAM = 8XEUVFYSL4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReplyKitDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App 需要您同意, 才能访问相机";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "App 需要您同意, 才能访问麦克风";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
