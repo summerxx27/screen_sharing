@@ -119,13 +119,13 @@
     CFNumberRef fpsRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberIntType, &fps);
     VTSessionSetProperty(self.compressionSession, kVTCompressionPropertyKey_ExpectedFrameRate, fpsRef);
     
-    // 7.设置码率(码率: 编码效率, 码率越高,则画面越清晰, 如果码率较低会引起马赛克 --> 码率高有利于还原原始画面,但是也不利于传输)
+    // 7.设置码率(码率: 编码效率, 码率越高, 则画面越清晰, 如果码率较低会引起马赛克 --> 码率高有利于还原原始画面, 但是也不利于传输)
     int bitRate = width * height * 3 * 4 * 8;
     CFNumberRef bitRateRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberSInt32Type, &bitRate);
     VTSessionSetProperty(self.compressionSession, kVTCompressionPropertyKey_AverageBitRate, bitRateRef);
     
     // 8.设置码率，均值，单位是byte 这是一个算法
-    NSArray *limit = @[@(bitRate * 1.5/8), @(1)];
+    NSArray *limit = @[@(bitRate * 1.5 / 8), @(1)];
     VTSessionSetProperty(self.compressionSession, kVTCompressionPropertyKey_DataRateLimits, (__bridge CFArrayRef)limit);
     
     // 9.基本设置结束, 准备进行编码
@@ -158,8 +158,7 @@ void didCompressH264(void *outputCallbackRefCon,
     
     // 判断当前帧是否为关键帧
     // 获取sps & pps数据
-    if (isKeyframe)
-    {
+    if (isKeyframe) {
         // 获取编码后的信息（存储于CMFormatDescriptionRef中）
         CMFormatDescriptionRef format = CMSampleBufferGetFormatDescription(sampleBuffer);
         
@@ -186,7 +185,9 @@ void didCompressH264(void *outputCallbackRefCon,
     size_t length, totalLength;
     char *dataPointer;
     OSStatus statusCodeRet = CMBlockBufferGetDataPointer(dataBuffer, 0, &length, &totalLength, &dataPointer);
+
     if (statusCodeRet == noErr) {
+
         size_t bufferOffset = 0;
         static const int AVCCHeaderLength = 4; // 返回的nalu数据前四个字节不是0001的startcode，而是大端模式的帧长度length
         
@@ -251,7 +252,6 @@ void didCompressH264(void *outputCallbackRefCon,
         self.h264DataBlock(h264Data);
     }
 }
-
 
 // 释放编码器
 - (void)dealloc

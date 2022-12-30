@@ -51,10 +51,10 @@ static void didDecompress(void *decompressionOutputRefCon,
     const uint8_t* const parameterSetPointers[2] = { _sps, _pps };
     const size_t parameterSetSizes[2] = { _spsSize, _ppsSize };
     OSStatus status = CMVideoFormatDescriptionCreateFromH264ParameterSets(kCFAllocatorDefault,
-                                                                          2, //param count
+                                                                          2, // param count
                                                                           parameterSetPointers,
                                                                           parameterSetSizes,
-                                                                          4, //nal start code size
+                                                                          4, // nal start code size
                                                                           &_decoderFormatDescription);
     
     if(status == noErr) {
@@ -63,8 +63,7 @@ static void didDecompress(void *decompressionOutputRefCon,
                                                            //这里款高和编码反的
                                                            (id)kCVPixelBufferOpenGLCompatibilityKey : [NSNumber numberWithBool:YES]
                                                            };
-        
-        
+
         VTDecompressionOutputCallbackRecord callBackRecord;
         callBackRecord.decompressionOutputCallback = didDecompress;
         callBackRecord.decompressionOutputRefCon = (__bridge void *)self;

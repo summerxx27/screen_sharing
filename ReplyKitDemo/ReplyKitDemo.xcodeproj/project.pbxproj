@@ -293,18 +293,15 @@
 		B991ACB3295DB6F8007C1D90 /* ReplyKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B991AD79295ED354007C1D90 /* 屏幕共享演示 */,
+				B991AD78295ED2E8007C1D90 /* CameraCapture */,
+				B991AD77295ED27E007C1D90 /* DisplayLayer */,
 				B991AD71295E93B1007C1D90 /* H264DeCode解码 */,
 				B991AD6E295E93B1007C1D90 /* H264EnCode编码 */,
-				B991AD6D295E93B1007C1D90 /* VideoDisplayLayer.h */,
-				B991AD6C295E93B0007C1D90 /* VideoDisplayLayer.m */,
-				B991AD69295E9301007C1D90 /* CaptureViewController.h */,
-				B991AD6A295E9301007C1D90 /* CaptureViewController.m */,
 				B991ACB4295DB6F8007C1D90 /* AppDelegate.h */,
 				B991ACB5295DB6F8007C1D90 /* AppDelegate.m */,
 				B991ACB7295DB6F8007C1D90 /* SceneDelegate.h */,
 				B991ACB8295DB6F8007C1D90 /* SceneDelegate.m */,
-				B991ACBA295DB6F8007C1D90 /* ViewController.h */,
-				B991ACBB295DB6F8007C1D90 /* ViewController.m */,
 				B991ACBD295DB6F8007C1D90 /* Main.storyboard */,
 				B991ACC0295DB6F9007C1D90 /* Assets.xcassets */,
 				B991ACC2295DB6F9007C1D90 /* LaunchScreen.storyboard */,
@@ -446,6 +443,33 @@
 				B991AD73295E93B1007C1D90 /* VideoH264Decoder.m */,
 			);
 			path = "H264DeCode解码";
+			sourceTree = "<group>";
+		};
+		B991AD77295ED27E007C1D90 /* DisplayLayer */ = {
+			isa = PBXGroup;
+			children = (
+				B991AD6D295E93B1007C1D90 /* VideoDisplayLayer.h */,
+				B991AD6C295E93B0007C1D90 /* VideoDisplayLayer.m */,
+			);
+			path = DisplayLayer;
+			sourceTree = "<group>";
+		};
+		B991AD78295ED2E8007C1D90 /* CameraCapture */ = {
+			isa = PBXGroup;
+			children = (
+				B991AD69295E9301007C1D90 /* CaptureViewController.h */,
+				B991AD6A295E9301007C1D90 /* CaptureViewController.m */,
+			);
+			path = CameraCapture;
+			sourceTree = "<group>";
+		};
+		B991AD79295ED354007C1D90 /* 屏幕共享演示 */ = {
+			isa = PBXGroup;
+			children = (
+				B991ACBA295DB6F8007C1D90 /* ViewController.h */,
+				B991ACBB295DB6F8007C1D90 /* ViewController.m */,
+			);
+			path = "屏幕共享演示";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
